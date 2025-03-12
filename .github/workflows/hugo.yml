@@ -60,12 +60,11 @@ jobs:
             --gc \
             --minify \
             --source ./site \
-            --destination ./public \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./public
+          path: ./site/public
 
   # Deployment job
   deploy:
