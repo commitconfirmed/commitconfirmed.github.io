@@ -20,5 +20,5 @@ Gemfile.lock
 # Hugo gitignores
 /site/resources/
 /site/public/
-/site/themes/
+/site/themes/tailwind/
 .hugo_build.lock
