@@ -14,12 +14,13 @@ RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hug
     dpkg -i hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
     rm hugo_extended_${HUGO_VERSION}_linux-amd64.deb
 
+RUN mkdir -p /site
+
 WORKDIR /site
 
-COPY . /site
+ENV HUGO_CACHEDIR=/cache
+ENV PATH="/var/hugo/bin:$PATH"
 
-RUN hugo
+#EXPOSE 1313
 
-EXPOSE 1313
-
-CMD ["hugo", "server", "--bind", "0.0.0.0"]
+#CMD ["hugo", "server", "--bind", "0.0.0.0"]

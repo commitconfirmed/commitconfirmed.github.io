@@ -1,0 +1,62 @@
+baseURL = "https://commitconfirmed.github.io"
+title = "commitconfirmed blog"
+author = "Andrew Jones"
+copyright = "Andrew Jones"
+pagination.pagerSize = 10
+languageCode = "en"
+theme = "tailwind"
+enableRobotsTXT = true
+enableEmoji = true
+
+[markup]
+  _merge = "deep"
+
+[params]
+  keywords = "network, network engineering, automation, network automation, python, go, golang, ansible, tmux"
+  subtitle = "Network Engineering and Automation"
+  contentTypeName = "posts"
+
+  [params.header]
+    logo = "logo.svg"
+    title = " commitconfirmed"
+
+  [params.footer]
+    since = 2025
+    poweredby = true
+
+    [[params.social_media.items]]
+      enabled = true
+      title = 'Bluesky'
+      icon = 'brand-bluesky'
+      link = 'https://bsky.app/profile/commitconfirmed.bsky.social'
+  
+    [[params.social_media.items]]
+      enabled = true
+      title = 'LinkedIn'
+      icon = 'brand-linkedin'
+      link = 'https://www.linkedin.com/in/linkedjones'
+  
+    [[params.social_media.items]]
+      enabled = true
+      title = 'Github'
+      icon = 'brand-github'
+      link = 'https://github.com/commitconfirmed'
+
+[menu]
+
+  [[menu.main]]
+    identifier = "post"
+    name = "Post"
+    pageRef = "/posts"
+    weight = 10
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    pageRef = "/about"
+    weight = 20
+
+[taxonomies]
+category = "categories"
+tag = "tags"
+series = "series"
