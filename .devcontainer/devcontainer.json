@@ -10,11 +10,10 @@
             },
             "extensions": [
                 "ms-azuretools.vscode-docker",
-                "vscode.git",
-                "golang.go"
+                "vscode.git"
             ]
         }
     },
     "forwardPorts": [1313],
-    "postCreateCommand": "git submodule update --init --recursive && sudo hugo server --bind 0.0.0.0 --disableFastRender"
+    "postCreateCommand": "git submodule update --init --recursive"
 }
