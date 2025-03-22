@@ -7,16 +7,15 @@
         "vscode": {
             "settings": {
                 "terminal.integrated.defaultProfile.linux": "zsh"
-            }
-        },
+            },
             "extensions": [
                 "ms-azuretools.vscode-docker",
                 "vscode.git",
                 "golang.go"
             ]
+        }
     },
-    "mounts": [
-        "source=./site,target=/site"
-    ],
-    "postCreateCommand": "hugo server --bind 0.0.0.0 --disableFastRender"
+    "forwardPorts": [1313],
+    "workspaceFolder": "/workspaces/commitconfirmed.github.io/site",
+    "postCreateCommand": "git submodule update --init --recursive && sudo hugo server --bind 0.0.0.0 --disableFastRender"
 }
