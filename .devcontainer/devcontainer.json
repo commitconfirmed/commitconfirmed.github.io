@@ -16,6 +16,5 @@
         }
     },
     "forwardPorts": [1313],
-    "workspaceFolder": "/workspaces/commitconfirmed.github.io/site",
     "postCreateCommand": "git submodule update --init --recursive && sudo hugo server --bind 0.0.0.0 --disableFastRender"
 }
