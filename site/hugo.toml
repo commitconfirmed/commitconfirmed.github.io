@@ -15,6 +15,11 @@ enableEmoji = true
   keywords = "network, network engineering, automation, network automation, python, go, golang, ansible, tmux"
   subtitle = "Network Engineering and Automation"
   contentTypeName = "posts"
+  showAuthor = true
+
+  [params.author]
+  name = "Andrew Jones"
+  email = "user@example.com"
 
   [params.header]
     logo = "logo.svg"
@@ -46,7 +51,7 @@ enableEmoji = true
 
   [[menu.main]]
     identifier = "post"
-    name = "Post"
+    name = "Posts"
     pageRef = "/posts"
     weight = 10
 

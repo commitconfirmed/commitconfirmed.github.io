@@ -21,6 +21,6 @@ WORKDIR /site
 ENV HUGO_CACHEDIR=/cache
 ENV PATH="/var/hugo/bin:$PATH"
 
+# Local testing if needed without compose
 #EXPOSE 1313
-
-#CMD ["hugo", "server", "--bind", "0.0.0.0"]
+#CMD ["hugo", "server", "--bind", "0.0.0.0", "--disableFastRender"]

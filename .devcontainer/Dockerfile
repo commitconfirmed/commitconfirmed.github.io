@@ -3,30 +3,21 @@ FROM mcr.microsoft.com/devcontainers/base:ubuntu
 
 ENV DEBIAN_FRONTEND=noninteractive
 ENV SHELL=/usr/bin/zsh
-ENV HUGO_VERSION 0.144.2
+ENV HUGO_VERSION 0.145.0
 
 RUN apt-get update -y && apt-get install -y \
-wget git curl build-essential ca-certificates \
+wget \
 && apt-get autoremove -y \
 && apt-get clean -y \
 && rm -rf /var/lib/apt/lists/*
 
-# Download and install Hugo
-RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb && \
-    dpkg -i hugo_${HUGO_VERSION}_Linux-64bit.deb && \
-    rm hugo_${HUGO_VERSION}_Linux-64bit.deb
+RUN wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
+    dpkg -i hugo_extended_${HUGO_VERSION}_linux-amd64.deb && \
+    rm hugo_extended_${HUGO_VERSION}_linux-amd64.deb
 
-# Set the working directory
-#WORKDIR /site
+RUN mkdir -p /site
 
-# Copy the site files
-#COPY . /site
+WORKDIR /site
 
-# Build the Hugo site
-RUN hugo
-
-# Expose the port Hugo server runs on
-EXPOSE 1313
-
-# Start the Hugo server
-CMD ["hugo", "server", "--bind", "0.0.0.0"]
+ENV HUGO_CACHEDIR=/cache
+ENV PATH="/var/hugo/bin:$PATH"

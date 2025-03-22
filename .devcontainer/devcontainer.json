@@ -15,5 +15,8 @@
                 "golang.go"
             ]
     },
-    "postCreateCommand": "hugo new site ."
+    "mounts": [
+        "source=./site,target=/site"
+    ],
+    "postCreateCommand": "hugo server --bind 0.0.0.0 --disableFastRender"
 }
