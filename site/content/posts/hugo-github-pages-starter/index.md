@@ -11,7 +11,7 @@ tags = [
 categories = [
     "hugo",
 ]
-series = ["Hugo"]
+series = ["Hugo Blog"]
 +++
 
 ## Introduction
@@ -24,12 +24,12 @@ This guide in particular uses a Tailwind CSS theme (ironically called [Tailwind]
 
 - Create a GitHub account
 - Create a new public repo called **username**.github.io replacing username your GitHub username 
-- Clone this repo into your repo
+- Clone my [repo](https://github.com/commitconfirmed/hugo-git-pages-starter) into your repo
 - Update the `~/site/hugo.toml` file with your own personal details
 - Update the `~/site/content/about/index.md` file with your own personal details
 - See the `~/site/content/posts/` directory for an example blog bost. 
   - Create a new folder and `index.md` file to make your own blog post
-- Update your repos Settings/Pages to deploy using Github Actions and create a workflow using the `~/.github/workflows/hugo.yml` file 
+- Update your repos Settings/Pages to deploy using Github Actions and create a workflow using the provided `~/.github/workflows/hugo.yml` file 
   - See the Hugo [Documentation](https://gohugo.io/host-and-deploy/host-on-github-pages/) for detailed instructions
 - Commit some changes and push to Main and your blog should now be available at https://username.github.io
 
@@ -453,4 +453,43 @@ Commit and push these changes.
 ## Extras
 
 ### Giscus
+
+Hugo and this theme support comments using giscus. To enable this follow the instructions at https://giscus.app/
+
+When installing the app set it to your username.github.io repository. Once done just enter your repository and it should validate
+
+<img src=./images/hugo-giscus-1.png alt="Giscus Settings #1">
+
+You can ignore the rest of the settings and scroll down to the enable giscus section where you can retrieve your repo, repoID and categoryID
+
+<img src=./images/hugo-giscus-2.png alt="Giscus Settings #1">
+
+Insert the below into your `hugo.toml` params section, replacing the repo, repoID and categoryID with your own
+
+```toml
+  [params.giscus]
+    enabled = true
+    repo = "username/username.github.io"
+    repoID = "R_#####"
+    category = "Announcements"
+    categoryID = "DIC_####"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "en"
+```
+
+### Google Analytics
+
+Hugo and this theme support Google Analytics. To enable this create an account at https://analytics.google.com/ then set up a tag for your github.io site. Once setup you'll have a G-XXXXXXXXXX tag which you can put into your `hugo.toml` file
+
+<u>hugo.toml</u>
+
+```toml
+[services]
+  [services.googleAnalytics]
+    ID = "G-XXXXXXXXXX"
+```
 

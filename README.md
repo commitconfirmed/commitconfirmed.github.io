@@ -1,15 +1,15 @@
 # commitconfirmed.github.io
-Personal Blog using Hugo
 
+My own personal blog. Visit https://commitconfirmed.github.io for the page.
 
-# Random notes
+If you would like to create your own Blog on GitHub pages, see https://commitconfirmed.github.io/posts/hugo-github-pages-starter and the associated starter respository https://github.com/commitconfirmed/hugo-git-pages-starter 
 
-Added the below to the tailwind theme as I wanted a title (layouts/partials/header.html)
+## Random notes
 
-``` html
-  {{ if .Site.Params.header.title }}
-  <div class="hidden md:flex items-center px-2 text-3xl bold text-slate-800 dark:text-slate-200 ">
-    {{ .Site.Params.header.title }}
-  </div>
-  {{ end }}
+Files to update when updating the Hugo version
+
+```bash
+Dockerfile
+.github/worksflows/hugo.yml
+.devcontainer/Dockerfile
 ```

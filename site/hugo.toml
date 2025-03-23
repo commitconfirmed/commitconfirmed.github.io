@@ -7,6 +7,7 @@ languageCode = "en"
 theme = "tailwind"
 enableRobotsTXT = true
 enableEmoji = true
+minify = false
 
 [markup]
   _merge = "deep"
@@ -28,6 +29,19 @@ enableEmoji = true
   [params.footer]
     since = 2025
     poweredby = true
+
+  [params.giscus]
+    enabled = true
+    repo = "username/username.github.io"
+    repoID = "R_kgDOOC1M0Q"
+    category = "Announcements"
+    categoryID = "DIC_kwDOOC1M0c4Cnijk"
+    mapping = "pathname"
+    strict = "0"
+    reactionsEnabled = "1"
+    emitMetadata = "0"
+    inputPosition = "bottom"
+    lang = "en"
 
     [[params.social_media.items]]
       enabled = true
@@ -68,3 +82,8 @@ series = "series"
 [caches]
   [caches.images]
     dir = ':cacheDir/images'
+
+[services]
+  [services.googleAnalytics]
+    ID = "G-TMR5HQPCWP"
+
