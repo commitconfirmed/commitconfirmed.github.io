@@ -32,7 +32,7 @@ minify = false
 
   [params.giscus]
     enabled = true
-    repo = "username/username.github.io"
+    repo = "commitconfirmed/commitconfirmed.github.io"
     repoID = "R_kgDOOC1M0Q"
     category = "Announcements"
     categoryID = "DIC_kwDOOC1M0c4Cnijk"
