@@ -32,6 +32,7 @@ This guide in particular uses a Tailwind CSS theme (ironically called [Tailwind]
 - Update your repos Settings/Pages to deploy using Github Actions and create a workflow using the provided `~/.github/workflows/hugo.yml` file 
   - See the Hugo [Documentation](https://gohugo.io/host-and-deploy/host-on-github-pages/) for detailed instructions
 - Commit some changes and push to Main and your blog should now be available at https://username.github.io
+- (Optional) Apply any [Extras](#extras)
 
 Supports Local, Docker Compose or GitHub Codespaces development.
 
@@ -149,10 +150,11 @@ hugo-1  | Press Ctrl+C to stop
 Once you are happy with the setup, perform a git commit & push to save the files created by the Hugo new site initialization. 
 </details>
 
-#### Codespaces
+#### GitHub Codespaces
 
 <details>
 <summary>Expand / Collapse</summary>
+
 If you would prefer not to install anything at all locally, you can do *all* of your development these days on a machine in the cloud from the comfort of a web brower using [github codespaces](https://github.com/features/codespaces) 
 
 Note that this is also free, for up to 60 hours a month (as of the time this was written) which should be more than enough unless you are a blogging machine or using codespaces for other projects.
@@ -246,14 +248,14 @@ You may see an error on first setup as we haven't installed a theme yet, but we 
 
 From here click the top bar or press <kbd><kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd></kbd> and select/type "Run Task" and then "Run Hugo Server" which should start up your Hugo server.
 
-In the ports tab you can simply click the globe icon next to the forwarded port and that should open up an additional tab which will display your Hugo website.
+In the ports tab you can simply click the globe icon next to the forwarded port and that should open up an additional tab which will display your Hugo website. Once you are happy, make sure you perform a commit and push to sync the newly created site to your repo.
 
-Once you are done, you can press <kbd><kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd></kbd> and type "Stop current codespace" to stop the codespace, or just close the tab and then stop the codespace from the [codespaces](https://github.com/codespaces) page. 
+> Note: Whenever you are done with developing, you can press <kbd><kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd></kbd> and type "Stop current codespace" to stop the codespace, or just close the tab and then stop the codespace from the [codespaces](https://github.com/codespaces) page. 
 </details>
 
 ### Tailwind theme installation
 
-Now that your Hugo environment(s) is setup, you can install the Tailwind theme. To do this navigate to the root directory of our Hugo side (~/site) and add the Tailwind theme as a Git submodule
+Now that your Hugo development environment is setup, you can install the Tailwind theme. To do this navigate to the root directory of our Hugo site (~/site) and add the Tailwind theme as a Git submodule
 
 ```bash
 git submodule add https://github.com/tomowang/hugo-theme-tailwind.git themes/tailwind
@@ -446,9 +448,11 @@ Finally, update the "Upload artifact" step to also reference our /site directory
 
 Commit and push these changes. 
 
-- Update your repos Settings/Pages to deploy using Github Actions and create a workflow using the `~/.github/workflows/hugo.yml` file 
-  - See the Hugo [Documentation](https://gohugo.io/host-and-deploy/host-on-github-pages/) for detailed instructions
-- Commit some changes and push to Main and your blog should now be available at https://username.github.io
+Now, in your repositories settings page, select the Pages section and change the Build and Deployment option source to to "GitHub Actions" and then select the "Deploy Hugo Site to Pages" workflow. Commit and Push another change and it should kick off the deployment action. You can view the progress and any failures
+
+If everything went through successfully, your pages section should now look like the below
+
+<img src="./images/hugo-pages-1.png" alt="GitHub settings screenshot">
 
 ## Extras
 
@@ -492,4 +496,6 @@ Hugo and this theme support Google Analytics. To enable this create an account a
   [services.googleAnalytics]
     ID = "G-XXXXXXXXXX"
 ```
+
+## Comments
 
