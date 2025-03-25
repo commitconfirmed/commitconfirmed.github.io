@@ -130,14 +130,33 @@ services:
       - ./site:/site
     ports: 
       - 1313:1313
-    command: hugo server --bind 0.0.0.0 --disableFastRender
+    # command: hugo server --bind 0.0.0.0 --disableFastRender
+    stdin_open: true
 ```
 
 From here, execute `"docker compose up"` to start up your hugo development server. You will notice that it will fail the first time because we have not created a new Hugo site yet.
 
-> output here
+```bash
+❯ sudo docker compose up
+[+] Running 1/1
+ ✔ Container hugo-git-pages-starter-hugo-1  Created
+Attaching to hugo-1
+
+^CGracefully stopping... (press Ctrl+C again to force)
+[+] Stopping 1/1
+ ✔ Container hugo-git-pages-starter-hugo-1  Stopped 
+canceled
+```
 
 To fix this, we can simply navigate to the site directory `"cd site"` and execute `"hugo new site ."` inside our container which will create the initial files and reflect them back to our local machine as we are using the Docker Compose volume mounting functionality. From here you can quit out of the container and execute `"docker compose down"` and `"docker compose up"` again and we should now have the development server up and running: 
+
+```bash
+❯ docker compose exec hugo /bin/bash
+root@ee56131712df:/site#
+root@ee56131712df:/site# hugo new site .
+Congratulations! Your new Hugo site was created in /site.
+
+```
 
 ```bash
 hugo-1  | Built in 52 ms
@@ -237,10 +256,7 @@ ENV PATH="/var/hugo/bin:$PATH"
 
 Perform a git commit & push so these files are uploaded to our repository. From here navigate to [codespaces](https://github.com/codespaces), select "New Codespace" and then select your repository. The rest of the settings should default to something like the below:
 
-- Branch: Main
-- Dev container configuration: Hugo Dev Container
-- Region: (your region)
-- Machine Type: 2-Core
+<img src="./images/hugo-codespace-1.png" alt="Codespaces GUI image">
 
 If everything looks good, click "Create Codespace", which should open up a new browser tab with a web version of Visio Studio Code with your repo ready to go.
 
@@ -248,7 +264,13 @@ You may see an error on first setup as we haven't installed a theme yet, but we 
 
 From here click the top bar or press <kbd><kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd></kbd> and select/type "Run Task" and then "Run Hugo Server" which should start up your Hugo server.
 
-In the ports tab you can simply click the globe icon next to the forwarded port and that should open up an additional tab which will display your Hugo website. Once you are happy, make sure you perform a commit and push to sync the newly created site to your repo.
+<img src="./images/hugo-codespace-2.png" alt="Codespaces GUI image">
+
+In the ports tab you can simply click the globe icon next to the forwarded port and that should open up an additional tab which will display your Hugo website. As we have no content yet it will display "Page not found".
+
+<img src="./images/hugo-codespace-3.png" alt="Codespaces GUI image">
+
+Once you are happy, make sure you perform a commit and push to sync the newly created site to your repo.
 
 > Note: Whenever you are done with developing, you can press <kbd><kbd>CTRL</kbd>+<kbd>SHIFT</kbd>+<kbd>P</kbd></kbd> and type "Stop current codespace" to stop the codespace, or just close the tab and then stop the codespace from the [codespaces](https://github.com/codespaces) page. 
 </details>
