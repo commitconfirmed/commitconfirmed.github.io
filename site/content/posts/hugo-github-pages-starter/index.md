@@ -52,7 +52,6 @@ Now, using your development environment of choice clone your newly created repos
 # Hugo gitignores
 /site/resources/
 /site/public/
-/site/themes/
 .hugo_build.lock
 ```
 
@@ -79,7 +78,7 @@ Once installed, navigate to the previously created site directory and execute `"
 
 <details>
 <summary>Expand / Collapse</summary>
-If using docker, create a Dockerfile file and docker-compose.yml file in the base directory of your repository with the below content (or simply copy these files in my basic-github-hugo-blog repo). You can change the HUGO_VERSION environment variable to the latest of whatever you want.
+If using docker, create a Dockerfile file and docker-compose.yml file in the base directory of your repository with the below content (or simply copy these files in my basic-github-hugo-blog repo). You can change the HUGO_VERSION environment variable to the latest or whatever you want.
 
 ```bash
 ~/Dockerfile
@@ -134,29 +133,59 @@ services:
     stdin_open: true
 ```
 
-From here, execute `"docker compose up"` to start up your hugo development server. You will notice that it will fail the first time because we have not created a new Hugo site yet.
+For our first run, we comment out the command and have `stdin_open: true` uncommented as our server will not run until we've created the initial site and the container will automatically be stopped. 
+
+In a terminal window execute `"sudo docker compose up"` to start up your hugo development server. You will notice that it sit at "Attaching to hugo-1" which will allow us to get into a bash shell on the server and create our site.
 
 ```bash
 ❯ sudo docker compose up
 [+] Running 1/1
  ✔ Container hugo-git-pages-starter-hugo-1  Created
 Attaching to hugo-1
+```
 
+In a different terminal window, you can now execute `"sudo docker compose exec hugo /bin/bash"` to get into our running container, and then execute `"hugo new site ."` to build our initial files and reflect them back to our local machine as we are using the Docker Compose volume mounting functionality.
+
+```bash
+❯ sudo docker compose exec hugo /bin/bash
+root@ee56131712df:/site#
+root@ee56131712df:/site# hugo new site .
+Congratulations! Your new Hugo site was created in /site.
+```
+
+Once done we can stop our running compose by pressing <kbd><kbd>CTRL</kbd>+<kbd>C</kbd></kbd> and then edit our `docker-compose.yml` file and uncomment the command line and comment the stdin_open line. 
+
+```bash
 ^CGracefully stopping... (press Ctrl+C again to force)
 [+] Stopping 1/1
  ✔ Container hugo-git-pages-starter-hugo-1  Stopped 
 canceled
 ```
 
-To fix this, we can simply navigate to the site directory `"cd site"` and execute `"hugo new site ."` inside our container which will create the initial files and reflect them back to our local machine as we are using the Docker Compose volume mounting functionality. From here you can quit out of the container and execute `"docker compose down"` and `"docker compose up"` again and we should now have the development server up and running: 
+As the container runs as root, the files that were synced via the volume functionality will be owned by root and won't be editable on your local machine. To fix this we can just do a `"sudo chown -R user:user *"` to recursively set the owner of these files to whatever username you are using on your local machine
 
 ```bash
-❯ docker compose exec hugo /bin/bash
-root@ee56131712df:/site#
-root@ee56131712df:/site# hugo new site .
-Congratulations! Your new Hugo site was created in /site.
+❯ cd site
+❯ ls -lah
+total 48K
+drwxr-xr-x 11 ajones ajones 4.0K Mar 26 20:24 .
+drwxr-xr-x  7 ajones ajones 4.0K Mar 25 21:18 ..
+drwxr-xr-x  2 root   root   4.0K Mar 25 21:34 archetypes
+drwxr-xr-x  2 root   root   4.0K Mar 25 21:34 assets
+drwxr-xr-x  2 root   root   4.0K Mar 25 21:34 content
+
+❯ sudo chown -R ajones:ajones *
+❯ ls -lah
+total 48K
+drwxr-xr-x 11 ajones ajones 4.0K Mar 26 20:24 .
+drwxr-xr-x  7 ajones ajones 4.0K Mar 25 21:18 ..
+drwxr-xr-x  2 ajones ajones 4.0K Mar 25 21:34 archetypes
+drwxr-xr-x  2 ajones ajones 4.0K Mar 25 21:34 assets
+drwxr-xr-x  2 ajones ajones 4.0K Mar 25 21:34 content
 
 ```
+
+Run `"sudo docker compose up"` again and we should now see the below.
 
 ```bash
 hugo-1  | Built in 52 ms
@@ -277,7 +306,7 @@ Once you are happy, make sure you perform a commit and push to sync the newly cr
 
 ### Tailwind theme installation
 
-Now that your Hugo development environment is setup, you can install the Tailwind theme. To do this navigate to the root directory of our Hugo site (~/site) and add the Tailwind theme as a Git submodule
+Now that your Hugo development environment is setup, you can install the Tailwind theme. To do this navigate to the root directory of your Hugo site (~/site) and add the Tailwind theme as a Git submodule
 
 ```bash
 git submodule add https://github.com/tomowang/hugo-theme-tailwind.git themes/tailwind
