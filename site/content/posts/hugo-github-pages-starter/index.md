@@ -12,6 +12,7 @@ categories = [
     "hugo",
 ]
 series = ["Hugo Blog"]
+image = "images/hugo-title.svg"
 +++
 
 ## Introduction

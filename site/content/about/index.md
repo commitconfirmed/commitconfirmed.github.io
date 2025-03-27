@@ -8,6 +8,7 @@ tags = [
 categories = [
     "personal",
 ]
+toc = false
 +++
 
 Testing about page
