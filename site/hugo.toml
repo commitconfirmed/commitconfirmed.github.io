@@ -17,6 +17,7 @@ minify = false
   subtitle = "Network Engineering and Automation"
   contentTypeName = "posts"
   showAuthor = true
+  imageQuality = 100
 
   [params.author]
   name = "Andrew Jones"
