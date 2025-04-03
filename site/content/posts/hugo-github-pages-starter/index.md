@@ -28,7 +28,7 @@ This guide in particular uses a Tailwind CSS theme (ironically called [Tailwind]
 - Clone my [repo](https://github.com/commitconfirmed/hugo-git-pages-starter) into your repo
 - Update the `~/site/hugo.toml` file with your own personal details
 - Update the `~/site/content/about/index.md` file with your own personal details
-- See the `~/site/content/posts/` directory for an example blog bost. 
+- See the `~/site/content/posts/` directory for an example blog post. 
   - Create a new folder and `index.md` file to make your own blog post
 - Update your repos Settings/Pages to deploy using Github Actions and create a workflow using the provided `~/.github/workflows/hugo.yml` file 
   - See the Hugo [Documentation](https://gohugo.io/host-and-deploy/host-on-github-pages/) for detailed instructions
@@ -204,7 +204,7 @@ Once you are happy with the setup, perform a git commit & push to save the files
 <details>
 <summary>Expand / Collapse</summary>
 
-If you would prefer not to install anything at all locally, you can do *all* of your development these days on a machine in the cloud from the comfort of a web brower using [github codespaces](https://github.com/features/codespaces) 
+If you would prefer not to install anything at all locally, you can do *all* of your development these days on a machine in the cloud from the comfort of a web browser using [github codespaces](https://github.com/features/codespaces) 
 
 Note that this is also free, for up to 60 hours a month (as of the time this was written) which should be more than enough unless you are a blogging machine or using codespaces for other projects.
 
@@ -288,7 +288,7 @@ Perform a git commit & push so these files are uploaded to our repository. From 
 
 <img src="./images/hugo-codespace-1.png" alt="Codespaces GUI image">
 
-If everything looks good, click "Create Codespace", which should open up a new browser tab with a web version of Visio Studio Code with your repo ready to go.
+If everything looks good, click "Create Codespace", which should open up a new browser tab with a web version of Visual Studio Code with your repo ready to go.
 
 You may see an error on first setup as we haven't installed a theme yet, but we will cover that next. As with the other methods, from the provided terminal enter the site directory `"cd site"` and initialize your site using the `"sudo hugo new site ."` command (you don't need to do this if you've used one of the other methods already)
 
@@ -442,7 +442,7 @@ series = ["Hugo"]
 blog text
 ```
 
-Once saved, Hugo will again automatically rebuild the site for you and you should see your blog posts, and assosiated tags/categories/series on the front page.
+Once saved, Hugo will again automatically rebuild the site for you and you should see your blog posts, and associated tags/categories/series on the front page.
 
 ```bash
 hugo-1  | Change detected, rebuilding site (#2).

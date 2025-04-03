@@ -17,7 +17,7 @@ image = "images/title.png"
 
 ## Introduction
 
-This repo expands on the basic tmux shell by moving from bash to zsh, adding the popular [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugin and, adding the [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme for a speedier and modern looking shell.
+This article expands on the basic [tmux](https://github.com/commitconfirmed/tmux-for-neteng) shell by moving from bash to zsh, adding the popular [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugin and, adding the [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme for a speedier and modern looking shell.
 
 Repository here https://github.com/commitconfirmed/tmux-p10k-for-neteng/
 
@@ -48,7 +48,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:-$
 
 - In your `~/.zshrc` file, change the ZSH_THEME and set your plugins of choice
 
-> Builtin plugins available at https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins if you want to further personally customise 
+> Builtin plugins available at https://github.com/ohmyzsh/ohmyzsh/wiki/Plugins if you want to further personally customize 
 
 ```sh
 ZSH_THEME="powerlevel10k/powerlevel10k"
@@ -61,7 +61,7 @@ plugins=(
 )
 ```
 
-- There are some additional steps depending on your disrto in the [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete) plugin to follow
+- There are some additional steps depending on your distribution in the [zsh-autocomplete](https://github.com/marlonrichert/zsh-autocomplete) plugin to follow
 - Restart zsh with `source ~/.zshrc`, this should now display the powerlevel10k configuration wizard which you can run through with your own personal preferences
 
 > If you do not like your powerlevel10k look, you can always run the configuration wizard again with `p10k configure`. 
@@ -98,7 +98,7 @@ Keybindings I've used as a personal preference, you can change this if you want 
 | `Ctrl+Space + 1-9` | Switch to window # |
 | `Ctrl+Space + [` | Switch to scrollback mode, can use VIM bindings here to search, etc. Press Enter twice to exit |
 | `Ctrl+Space + -` | Create a Horizontal Split |
-| `Ctrl+Space + =` | Create a Vertial Split |
+| `Ctrl+Space + =` | Create a Vertical Split |
 | `Alt+Arrow Keys` | Navigate between Split Panes |
 | `Ctrl+Space + d` | Detach TMUX |
 | `Ctrl+Space + r` | Reload TMUX config |
@@ -110,3 +110,5 @@ If you found this post useful, please show your support by sponsoring or at leas
 - https://github.com/ohmyzsh/ohmyzsh
 - https://github.com/marlonrichert/zsh-autocomplete
 - https://github.com/romkatv/powerlevel10k
+
+## Comments
