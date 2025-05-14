@@ -8,9 +8,6 @@ tags = [
     "zsh",
     "tmux",
 ]
-categories = [
-    "linux",
-]
 series = ["Linux Shell"]
 image = "images/title.png"
 +++

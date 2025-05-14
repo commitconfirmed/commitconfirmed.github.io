@@ -2,27 +2,27 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "Commitconfirmed"
+title = "COMMITCONFIRMED"
 
 [params]
   displayName = "EN"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  # logo = "img/logo.png"
+  logo = "img/logo.svg"
   # secondaryLogo = "img/secondary-logo.png"
   description = "Personal Blog"
-  copyright = "2025 Andrew Jones"
+  copyright = "© { year } Andrew Jones"
 
   [params.author]
     name = "Andrew Jones"
     email = "blog@commitconfirmed.com"
-    image = "img/blowfish_logo.png"
+    image = "img/author-logo.png"
     imageQuality = 96
-    headline = "Network Engineering, Automation & Other things"
-    bio = "Melbourne Based Network Engineer"
+    headline = "Network Engineering, Network Automation & Other things"
+    bio = "Network Engineering & Automation Generalist"
     links = [
-      { email = "mailto:blog@commitconfirmed.com" },
+#     { email = "mailto:blog@commitconfirmed.com" },
 #     { link = "https://link-to-some-website.com/" },
 #     { amazon = "https://www.amazon.com/hz/wishlist/ls/wishlist-id" },
 #     { apple = "https://www.apple.com" },
