@@ -9,8 +9,8 @@ title = "COMMITCONFIRMED"
   isoCode = "en"
   rtl = false
   dateFormat = "2 January 2006"
-  logo = "img/logo.svg"
-  # secondaryLogo = "img/secondary-logo.png"
+  logo = "img/header-logo.svg"
+  # secondaryLogo = "img/logo.svg"
   description = "Personal Blog"
   copyright = "© { year } Andrew Jones"
 

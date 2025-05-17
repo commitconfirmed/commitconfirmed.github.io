@@ -8,7 +8,7 @@ tags = [
     "github",
     "github-pages",
 ]
-series = ["Hugo Blog"]
+showComments = "true"
 +++
 
 ## Introduction
@@ -544,6 +544,3 @@ Hugo and this theme support Google Analytics. To enable this create an account a
   [services.googleAnalytics]
     ID = "G-XXXXXXXXXX"
 ```
-
-## Comments
-

@@ -8,23 +8,30 @@ tags = [
     "zsh",
     "tmux",
 ]
-series = ["Linux Shell"]
-image = "images/title.png"
+showComments = "true"
 +++
 
 ## Introduction
 
-This article expands on the basic [tmux](https://github.com/commitconfirmed/tmux-for-neteng) shell by moving from bash to zsh, adding the popular [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugin and, adding the [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme for a speedier and modern looking shell.
+This article expands on the basic [tmux](https://github.com/commitconfirmed/tmux-for-neteng) repo by moving from bash to zsh, adding the popular [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh) plugin and, adding the [powerlevel10k](https://github.com/romkatv/powerlevel10k) theme for a speedier and modern looking shell.
 
-Repository here https://github.com/commitconfirmed/tmux-p10k-for-neteng/
+Repository below:
+
+{{< github repo="commitconfirmed/tmux-p10k-for-neteng" >}}
 
 ## Try it out
 
 Just click the "Open in GitHub Codespaces" button below! (github account required) Should see a terminal that looks similar to the below:
 
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/commitconfirmed/tmux-p10k-for-neteng?quickstart=1&devcontainer_path=.devcontainer%2Fdevcontainer.json)
 
-<img src="images/title.png" alt="Codespaces terminal window">
+{{< figure
+    src="https://github.com/codespaces/badge.svg"
+    alt="Open in GitHub Codespaces"
+    href="https://codespaces.new/commitconfirmed/tmux-p10k-for-neteng?quickstart=1&devcontainer_path=.devcontainer%2Fdevcontainer.json"
+    nozoom="true"
+    >}}
+
+<img src="images/tmux-screenshot-1.png" alt="Codespaces terminal window">
 
 ## Installation
 
@@ -107,5 +114,3 @@ If you found this post useful, please show your support by sponsoring or at leas
 - https://github.com/ohmyzsh/ohmyzsh
 - https://github.com/marlonrichert/zsh-autocomplete
 - https://github.com/romkatv/powerlevel10k
-
-## Comments

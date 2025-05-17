@@ -1,9 +1,9 @@
 +++
-title = "About"
+title = "CV"
 date = "2025-05-17"
-description = "About Me"
+description = "Andrew Jones (commitconfirmed) CV"
 layout = "simple"
 sharingLinks = false
 +++
 
-Testing about page
+TBD
