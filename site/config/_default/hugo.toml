@@ -67,3 +67,7 @@ googleAnalytics = "G-TMR5HQPCWP"
       name = 'fragmentrefs'
       type = 'fragments'
       weight = 10
+
+[caches]
+  [caches.images]
+    dir = ':cacheDir/images'

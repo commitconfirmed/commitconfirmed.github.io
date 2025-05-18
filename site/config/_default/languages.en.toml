@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "COMMITCONFIRMED"
+title = "COMMIT CONFIRMED"
 
 [params]
   displayName = "EN"
