@@ -1,7 +1,7 @@
 +++
 title = "Andrew Jones CV"
 date = "2025-05-17"
-lastmod = "2025-05-23"
+lastmod = "2025-06-03"
 description = "Andrew Jones (commitconfirmed) CV"
 showAuthor = true
 showAuthorBottom = true
@@ -21,7 +21,7 @@ Australian (Victoria) based Network Engineer with over 15 years of experience, m
 | 10+ Years | `OSPF, iBGP, eBGP, MP-BGP, QinQ, VLANs, QoS, MPLS, RSVP, VPLS, L2Circuit, VRFs` |
 | 5-10 Years | `Firewalls, VPN, IPSec, Security Policy, IDS, IPv6, Multicast, Load Balancing, NAT` |
 | 3-5 Years | `IS-IS, Segment Routing, EVPN, VXLAN, RADIUS, TACACS+, VoIP, SIP` |
-| 0-2 Years | `MACSec, Wireless (802.11), SD-WAN, 802.1X, RPKI` |
+| 1-2 Years | `MACSec, Wireless (802.11), SD-WAN, 802.1X, RPKI` |
 
 ### Network Design
 
@@ -30,7 +30,7 @@ Australian (Victoria) based Network Engineer with over 15 years of experience, m
 | 10+ Years | `Service Provider Core, Service Provider Access, Datacenter (Physical), Gateway (POP)` |
 | 5-10 Years | `Peering, Route Servers, IXP, IP Transit, Datacenter (Core+Access), Labs & POCs` |
 | 3-5 Years | `Enterprise Branch, Enterprise Core, Datacenter (Leaf+Spine)` |
-| 0-2 Years | `Campus Wireless, DWDM, ILA, Cloud (VPC), Cloud (DX)` |
+| 1-2 Years | `Campus Wireless, DWDM, ILA, Cloud (VPC), Cloud (DX)` |
 
 ### Automation & Telemetry
 
@@ -38,14 +38,14 @@ Australian (Victoria) based Network Engineer with over 15 years of experience, m
 | -------- | -------- |
 | 5-10 Years | `SNMP, Netflow, CLI` |
 | 3-5 Years | `Ansible, Netbox, Splunk, TR-069` |
-| 0-2 Years | `Nornir, Kubernetes, Prometheus, GNMI, ZTP, Containerlab, Batfish, Grafana, Terraform` |
+| 1-2 Years | `Nornir, Kubernetes, Prometheus, GNMI, ZTP, Containerlab, Batfish, Grafana, Terraform` |
 
 ### Programming
 
 | Duration | Skill(s) |
 | -------- | -------- |
 | 3-5 Years | `Python, Shell, REST API, XML, JSON, YAML, HTML, CSS, SQL` |
-| 0-2 Years | `Go, Golang` |
+| 1-2 Years | `Go, Golang` |
 
 ### Operating Systems & Other
 
@@ -54,7 +54,7 @@ Australian (Victoria) based Network Engineer with over 15 years of experience, m
 | 10+ Years | `Linux (Ubuntu), Cisco IOS, Juniper JUNOS, A10 AXOS` |
 | 5-10 Years | `VMWare, Arista EOS` |
 | 3-5 Years | `Docker, Linux (RedHat), Cisco IOS-XR` |
-| 0-2 Years | `cRPD, cEOS, BIRD, FRR, GoBGP` |
+| 1-2 Years | `cRPD, cEOS, BIRD, FRR, GoBGP` |
 
 ## Experience
 

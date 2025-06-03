@@ -7,4 +7,4 @@ services:
       - ./site:/site
     ports: 
       - 1313:1313
-    command: hugo server --bind 0.0.0.0 --disableFastRender
+    command: hugo server --bind 0.0.0.0 --disableFastRender --buildDrafts
