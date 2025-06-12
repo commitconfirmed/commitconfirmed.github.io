@@ -2,7 +2,7 @@
 FROM ubuntu:latest
 
 ENV DEBIAN_FRONTEND=noninteractive
-ENV HUGO_VERSION=0.145.0
+ENV HUGO_VERSION=0.147.5
 
 RUN apt-get update -y && apt-get install -y \
 wget \

@@ -1,6 +1,6 @@
 +++
 title = "Network Diagram Guide - Intro"
-date = "2025-06-02"
+date = "2025-06-12"
 description = "A guide to drawing better Network Diagrams"
 tags = [
     "network engineering",
@@ -14,7 +14,6 @@ series = [
 ]
 series_order = 1
 showComments = "true"
-draft = "true"
 +++
 
 ## Introduction
@@ -27,44 +26,39 @@ This article deals with the tools I have used to document, plan & draw diagrams.
 
 Excel as a Network Diagram tool? I have surprisingly seen topology diagrams in excel before but generally it is used to draw up Elevation/Rack diagrams and data center floor plans.
 
+Excel does shine here as it is very quick to mock something up and make quick changes while planning a build, but you should move this data to a proper DCIM product once you've completed your planning and are ready to build.
 
+See an example Excel file below to see an example of what I have used in the past to plan a rack build. Also comes with an automatically updating Data tab that you can export as a CSV to import into another system once you're ready
 
-Let's start with the bane of every Network Engineers existence, Excel. We have all had to deal with an IP address spreadsheet sometime in our lives. 
-
-It is very easy to spin up a basic network source of truth these days. 
-
-Where Excel is does shine is its speed
-
-## Visio
-
-
-## draw.io
-
+[Example File](./static/cc-rack-design.xlsx)
 
 ## Excalidraw
 
+[Excalidraw](https://excalidraw.com/) is a free online & open source whiteboard. It is now my replacement for the old MSPaint or a Physical whiteboard (especially in a post covid world). It is very quick to open up and start drawing whatever you want. Great for concepts or just having that nice whiteboard look on a presentation or wiki article. Being able to export as a SVG file as well ensures your drawing looks great no matter what size it is.
 
-## other
+All the images on this blog have been drawn using it!
 
-The ready to go example lab for this article is the [basic-nornir](https://github.com/commitconfirmed/npa-showcases/tree/main/examples/basic-nornir) topology. Navigate into this directory and execute `manage.sh build` & `manage.sh run` 
+## Visio
 
-{{< alert >}}
-**Note:** If this is your first time here, see the [NPA Showcases](/npa-showcases) documentation for initial installation steps on your local machine or a GitHub codespace
-{{< /alert >}}
+Visio is the defacto tool that most engineers have come across in their careers to draw pretty much any type of diagram you can think of. It's great for Elevation, Physical, Logical, Data Flow, etc. diagrams and has the most vendor provided stencils of any solution. The downside of course is that it is not free, and the place you are working at may not have it included in their 365 subscription.  
 
-## Topology
+## diagrams.net
 
-The folder structure of our Nornir server is below
+[diagrams.net](https://app.diagrams.net/) (previously draw.io) is a free web-based diagram tool that is pretty much functionally the same as Visio. Compared to Visio it does offer a lot of advantages a few disadvantages:
 
-| File | Description | 
-| --- | --- |
-| `/app/config.yml` | Our basic Nornir config file | 
-| `/app/inventory/defaults.yml` | Default inventory variables, applies to all hosts | 
-| `/app/inventory/groups.yml` | Group inventory variables, applies to hosts in this group | 
-| `/app/inventory/hosts.yml` | Host inventory variables, specific to the host | 
-| `/app/tasks/task-inventory.py` | Example task showing inventory management |
-| `/app/tasks/task-napalm.py` | Example task to interact with devices using NAPALM plugin |
-| `/app/tasks/task-netmiko.py` | Example task to interact with devices using NETMIKO plugin |
-| `/app/tasks/task-scrapli.py` | Example task to interact with devices using SCRAPLI plugin |
-| `/app/templates/ceos1.j2` | Jinja2 template for our cEOS device |
-| `/app/templates/crpd1.j2` | Jinja2 template for our cRPD device |
+Advantages:
+
+- Free
+- Runs on your browser, also has an optional offline App
+- Ability to export as SVG
+- Integration with GitHub, Notion & Confluence/JIRA
+
+Disadvantages:
+
+- Limited Networking Vendor and other Stencils
+
+This is my personal tool of choice these days to do my Network Diagramming unless I need to present very specific diagrams that go down to the physical hardware level.
+
+## Tips & Tricks
+
+TBD
