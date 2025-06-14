@@ -2,7 +2,7 @@ disabled = false
 languageCode = "en"
 languageName = "English"
 weight = 1
-title = "COMMIT CONFIRMED"
+title = "COMMIT CONFIRMED BLOG"
 
 [params]
   displayName = "EN"
@@ -11,7 +11,7 @@ title = "COMMIT CONFIRMED"
   dateFormat = "2 January 2006"
   logo = "img/header-logo.svg"
   # secondaryLogo = "img/logo.svg"
-  description = "Personal Blog"
+  description = "Network Engineering & Network Automation Blog"
   copyright = "© { year } Andrew Jones"
 
   [params.author]

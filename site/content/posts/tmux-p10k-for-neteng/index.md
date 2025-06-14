@@ -9,6 +9,7 @@ tags = [
     "tmux",
 ]
 showComments = "true"
+robots = "all"
 +++
 
 ## Introduction

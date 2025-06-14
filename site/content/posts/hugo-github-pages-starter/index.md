@@ -9,6 +9,7 @@ tags = [
     "github-pages",
 ]
 showComments = "true"
+robots = "all"
 +++
 
 ## Introduction
