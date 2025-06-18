@@ -14,6 +14,7 @@ series = [
 ]
 series_order = 2
 showComments = "true"
+robots = "all"
 draft = "true"
 +++
 
